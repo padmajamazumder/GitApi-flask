@@ -1,3 +1,4 @@
+import os
 import json
 from flask import Flask, render_template, request
 import requests
@@ -9,7 +10,10 @@ def index():
     if request.method == "POST":
         name = request.form.get("username")
 
-        response = requests.get(f"https://api.github.com/users/{name}")
+        github_api_url = os.environ["GITHUB_API_URL"]
+        github_access_token = os.environ["GITHUB_ACCESS_TOKEN"]
+        # github api: https://api.github.com
+        response = requests.get(f"{github_api_url}/users/{name}", headers={"Authorization": f"Bearer{github_access_token}"})
 
         if response.status_code == 200:
             data = response.json()
