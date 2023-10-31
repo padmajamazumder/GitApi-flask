@@ -1,0 +1,25 @@
+.VirtualBox/
+.android/
+.bash_history
+.dotnet/
+.emulator_console_auth_token
+.gitconfig
+.gradle/
+.jdks/
+.lesshst
+.vscode/
+3D Objects/
+AppData/
+Contacts/
+Desktop/
+Documents/
+Downloads/
+Favorites/
+Links/
+Music/
+NTUSER.DAT
+OneDrive/
+Pictures/
+Saved Games/
+Searches/
+Videos/
